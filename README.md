@@ -57,11 +57,12 @@ A bash script that monitors resources usage, temperature, battery and sends a sy
 ### Flags
 
 - `-maxTemp` : Changes maximum temperature threshold
-- `-maxCpu` : Changes maximum CPU usgae threshold
+- `-maxCpu` : Changes maximum CPU usage threshold
 - `-maxRam` : Changes maximum RAM usage threshold
 - `-maxBat` : Changes maximum battery threshold
 - `-miBat` : Changes minimum battery threshold
   ![image](https://imgur.com/T649Kh6.png)
+  ![image](https://imgur.com/CL2sdq4.png)
 
 ### Combination of flags
 
@@ -79,4 +80,3 @@ Your contributions are always welcome! Please have a look at the [contribution g
 [(Back to top)](#table-of-contents)
 
 The MIT License (MIT) 2025 - [VsreddyH](https://github.com/vsreddyh/). Please have a look at the [LICENSE.md](LICENSE.md) for more details.
-
