@@ -115,6 +115,11 @@ while [[ $# -gt 0 ]]; do
 		update_config "MAX_BATTERY" "$2"
 		shift 2
 		;;
+	-show)
+		cat $CONFIG_FILE
+		shift 1
+		;;
+
 	start)
 		if pgrep -f "warner" | grep -v "$$" >/dev/null; then
 			echo "Warner is already running."
