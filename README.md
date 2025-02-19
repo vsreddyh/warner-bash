@@ -61,7 +61,10 @@ A bash script that monitors resources usage, temperature, battery and sends a sy
 - `-maxRam` : Changes maximum RAM usage threshold
 - `-maxBat` : Changes maximum battery threshold
 - `-miBat` : Changes minimum battery threshold
+- `-show` : shows current config
+  
   ![image](https://imgur.com/T649Kh6.png)
+  
   ![image](https://imgur.com/CL2sdq4.png)
 
 ### Combination of flags
