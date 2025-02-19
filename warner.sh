@@ -62,9 +62,10 @@ checkRam() {
 
 checkBattery() {
 	local x=$(cat /sys/class/power_supply/BAT0/capacity)
-	if [ $x -ge $MAX_BATTERY ]; then
+	local status=$(cat /sys/class/power_supply/BAT0/status)
+	if [ "$x" -ge "$MAX_BATTERY" ] && [ "$status" = "Charging" ]; then
 		notify-send -t 10000 "Warning: Battery high ($x%) exceeded $MAX_BATTERY%"
-	elif [ $x -le $MIN_BATTERY ]; then
+	elif [ "$x" -le "$MIN_BATTERY" ] && [ "$status" = "Discharging" ]; then
 		notify-send -t 10000 "Warning: Battery low ($x%) below $MIN_BATTERY%"
 	fi
 }
@@ -134,7 +135,7 @@ while [[ $# -gt 0 ]]; do
 		shift 1
 		;;
 	*)
-		echo "Usage: $0 {start|stop|-maxTemp value|-maxCpu value|-maxRam value|-minBat value|-maxBat value}"
+		echo "Usage: $0 {start|stop|-show|-maxTemp value|-maxCpu value|-maxRam value|-minBat value|-maxBat value}"
 		exit 1
 		;;
 	esac
